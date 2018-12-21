@@ -9,7 +9,7 @@ extern "C" {
 #include <efiapi.h>
 #include <efierr.h>
 }
-#include "efi.hh"
+#include "bootloader.hh"
 EFI_STATUS efi_cpp_main(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *system_table);
 
 extern "C" EFI_STATUS EFIAPI efi_main(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *system_table) {
@@ -18,5 +18,5 @@ extern "C" EFI_STATUS EFIAPI efi_main(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE 
 
 EFI_STATUS efi_cpp_main(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *system_table){
     //uefi_call_wrapper(ST-> ConOut -> OutputString, 2, ST -> ConOut, L"Hello world!\n" );
-    return EFI(image_handle, system_table).main();
+    return Bootloader(image_handle, system_table).main();
 }
