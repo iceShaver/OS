@@ -1,0 +1,12 @@
+# bochsrc
+#
+megs: 128
+#
+display_library: x
+mouse: enabled=1
+#
+ata0-master: type=disk, path="disk.bin", mode=flat
+#
+log: bochsout.txt
+#
+boot: disk
