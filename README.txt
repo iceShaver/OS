@@ -1,4 +1,4 @@
-Uruchominie:
+Uruchomienie:
 run.sh -> budowanie bootloadera, kernela, kopiowanie plików, tworzenie obrazu, uruchomienie maszyny
 
 Zrobione:
@@ -8,3 +8,4 @@ Zrobione:
 
 TODO:
 * przerwania
+
